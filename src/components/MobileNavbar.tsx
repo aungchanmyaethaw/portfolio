@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { DownloadLink, NavbarProps } from "./Navbar";
 import { buttonAnimation } from "../styles/global.styles";
-import CVForm from "../../public/Aung-Chan-Myae-Thaw-CV.pdf";
+import CVForm from "../assets/Aung-Chan-Myae-Thaw-CV.pdf";
 
 export default function MobileNavbar({ setMobileNavStatus }: NavbarProps) {
   return (

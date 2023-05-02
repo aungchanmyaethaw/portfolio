@@ -48,29 +48,29 @@ export default function About() {
 
   return (
     <section
-      className="container  px-4  mx-auto md:px-8 xl:px-[8rem] py-[4rem] mt-4"
+      className="container lg:max-w-4xl  xl:max-w-full  px-4  mx-auto md:px-8 xl:px-[8rem] py-[4rem] mt-4 overflow-x-hidden"
       id="about"
     >
-      <div className="flex items-center gap-2 mb-12">
-        <motion.h2
-          className="text-xl font-semibold md:text-2xl whitespace-nowrap lg:text-3xl font-heading text-secondary"
-          initial={{ x: "200", opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
+      <motion.div
+        className="flex items-center gap-2 mb-16"
+        initial={{ x: "200", opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-xl font-semibold md:text-2xl whitespace-nowrap lg:text-3xl font-heading text-secondary">
           About me
-        </motion.h2>
+        </h2>
         <div className="w-[20rem] mt-2 h-[1px] bg-secondary bg-opacity-50" />
-      </div>
-      <div className="flex flex-col-reverse items-center justify-between max-w-6xl mx-auto lg:flex-row font-paragraph">
+      </motion.div>
+      <div className="flex flex-col-reverse items-center justify-between mx-auto lg:max-w-4xl xl:max-w-6xl lg:flex-row font-paragraph">
         <div className="lg:basis-1/2 basis-full">
           <motion.p
             initial={{ opacity: 0, x: "-50" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
             viewport={{ once: true }}
-            className="mb-4 text-sm leading-7 md:text-base text-light"
+            className="mb-4 text-sm !leading-7 md:text-base text-light"
           >
             Hi, I'm Aung Chan Myae Thaw, a web developer based in Yangon. I
             recently completed a web development OJT program from{" "}
@@ -85,7 +85,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
-            className="mb-4 text-sm leading-7 md:text-base text-light"
+            className="mb-4 text-sm !leading-7 md:text-base text-light"
           >
             I have experience with{" "}
             <span className="font-semibold text-secondary">HTML</span>,{" "}
@@ -111,7 +111,7 @@ export default function About() {
             <span className="font-semibold text-secondary">Typescript</span>.
           </motion.p>
           <motion.p
-            className="mb-4 text-sm leading-7 md:text-base text-light"
+            className="mb-4 text-sm !leading-7 md:text-base text-light"
             initial={{ opacity: 0, x: "-50" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
@@ -176,7 +176,7 @@ export default function About() {
   );
 }
 
-const ImageContainer = styled(motion.div)`
+export const ImageContainer = styled(motion.div)`
   .after {
     content: "";
     width: 100%;

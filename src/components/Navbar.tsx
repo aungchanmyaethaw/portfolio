@@ -3,7 +3,7 @@ import { buttonAnimation } from "../styles/global.styles";
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
 import styled from "styled-components";
-import CVForm from "../../public/Aung-Chan-Myae-Thaw-CV.pdf";
+import CVForm from "../assets/Aung-Chan-Myae-Thaw-CV.pdf";
 
 export interface NavbarProps {
   setMobileNavStatus: React.Dispatch<React.SetStateAction<boolean>>;
@@ -39,7 +39,13 @@ export default function Navbar({ setMobileNavStatus }: NavbarProps) {
           >
             About me
           </Link>
-          <Link to="" className="font-medium text-light">
+          <Link
+            to="projects"
+            smooth={true}
+            spy={true}
+            duration={500}
+            className="font-medium cursor-pointer text-light hover:text-secondary"
+          >
             Projects
           </Link>
           <Link to="" className="font-medium text-light">

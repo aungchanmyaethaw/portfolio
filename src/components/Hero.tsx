@@ -16,7 +16,7 @@ export default function Hero() {
       className="container  px-4  mx-auto md:px-8 xl:px-[8rem] py-[4rem] h-[90vh]"
       id="hero"
     >
-      <HeroContainer className=" h-max py-[4rem] md:py-[7rem] px-8 md:px-[4rem]   relative flex flex-col items-center">
+      <HeroContainer className=" h-max py-[4rem] md:py-[7rem] px-8 md:px-[4rem] lg:max-w-4xl mx-auto xl:max-w-full   relative flex flex-col items-center">
         <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-[5rem] font-light text-light font-heading text-center mb-4 lg:mb-6 ">
           Welcome<span className="font-semibold text-secondary ">.</span>
         </h1>

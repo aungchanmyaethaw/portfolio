@@ -6,6 +6,7 @@ import LeftSocialBar from "./components/LeftSocialBar";
 import Navbar from "./components/Navbar";
 import RightEmailBar from "./components/RightEmailBar";
 import MobileNavbar from "./components/MobileNavbar";
+import Projects from "./components/Projects";
 
 export default function App() {
   const [mobileNavStatus, setMobileNavStatus] = useState<boolean>(false);
@@ -17,6 +18,7 @@ export default function App() {
       <Navbar setMobileNavStatus={setMobileNavStatus} />
       <Hero />
       <About />
+      <Projects />
       <AnimatePresence>
         {mobileNavStatus ? (
           <MobileNavbar setMobileNavStatus={setMobileNavStatus} />

@@ -8,6 +8,7 @@ export default function RightEmailBar() {
           className="block mb-[8rem] tracking-widest text-sm font-semibold rotate-90 text-light"
           whileHover={{ color: "#4979EE" }}
           whileTap={{ color: "#4979EE" }}
+          rel="noreferrer"
         >
           aungchanmyaethaw0610@gmail.com
         </motion.a>
