@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-scroll";
 import { buttonAnimation } from "../styles/global.styles";
 import { motion } from "framer-motion";
