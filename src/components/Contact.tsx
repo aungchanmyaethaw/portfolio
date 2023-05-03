@@ -16,6 +16,7 @@ export default function Contact() {
           y: 0,
           transition: { delay: 0.25, duration: 0.5 },
         }}
+        viewport={{ once: true }}
       >
         <h2 className="text-2xl font-semibold md:text-4xl lg:text-5xl text-light font-heading">
           Get In Touch.
