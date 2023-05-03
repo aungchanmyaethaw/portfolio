@@ -4,6 +4,9 @@ import { FiUpload } from "react-icons/fi";
 import { ProjectProps } from "./Projects";
 import { ImageContainer } from "./About";
 
+interface ProjectCardProps extends ProjectProps {
+  index: number;
+}
 const afterVariants = {
   initial: {
     opacity: 0.5,
@@ -13,9 +16,27 @@ const afterVariants = {
   },
 };
 
-interface ProjectCardProps extends ProjectProps {
-  index: number;
-}
+const leftVariants = {
+  initial: {
+    opacity: 0,
+    x: "-200",
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+};
+
+const rightVariants = {
+  initial: {
+    opacity: 0,
+    x: "200",
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+};
 
 export default function ProjectCard({
   image,
@@ -28,11 +49,23 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <>
-      <article className="relative z-10 block px-4 py-6 rounded-lg bg-opacity-20 md:hidden bg-secondary">
+      <motion.article
+        className="relative z-10 block px-4 py-6 rounded-lg bg-opacity-20 md:hidden bg-secondary"
+        variants={index % 2 === 0 ? rightVariants : leftVariants}
+        initial="initial"
+        whileInView="animate"
+        transition={{ duration: 0.75, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
         <div className="flex items-center gap-4 mb-6 ">
-          <h3 className="text-xl font-semibold font-heading text-light ">
+          <a
+            href={deploy}
+            rel="noreferrer"
+            target="_blank"
+            className="text-lg font-semibold font-heading text-light "
+          >
             {title}
-          </h3>
+          </a>
           <motion.a
             href={git}
             target="_blank"
@@ -70,14 +103,19 @@ export default function ProjectCard({
             </li>
           ))}
         </ul>
-      </article>
+      </motion.article>
 
       {/* large */}
 
-      <article
+      <motion.article
         className={` hidden md:flex items-start   ${
           index % 2 === 0 ? "flex-row" : "flex-row-reverse"
         }`}
+        variants={index % 2 === 0 ? rightVariants : leftVariants}
+        initial="initial"
+        whileInView="animate"
+        transition={{ duration: 0.75, delay: 0.1 }}
+        viewport={{ once: true }}
       >
         <a
           href={deploy}
@@ -143,7 +181,7 @@ export default function ProjectCard({
           <ul
             className={` ${
               index % 2 == 0 ? "justify-end" : "justify-start"
-            } flex items-center gap-4 font-medium text-light font-paragraph`}
+            } flex items-center gap-4 font-medium text-light font-paragraph flex-wrap`}
           >
             {techs.map((tech) => (
               <li
@@ -155,7 +193,7 @@ export default function ProjectCard({
             ))}
           </ul>
         </div>
-      </article>
+      </motion.article>
     </>
   );
 }

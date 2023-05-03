@@ -37,13 +37,30 @@ export default function MobileNavbar({ setMobileNavStatus }: NavbarProps) {
             smooth={true}
             spy={true}
             duration={500}
+            offset={-50}
+            onClick={() => setMobileNavStatus(false)}
           >
             About me
           </Link>
-          <Link to="" className="text-lg font-medium text-light">
+          <Link
+            to="projects"
+            smooth={true}
+            spy={true}
+            duration={500}
+            offset={-50}
+            className="text-lg font-medium cursor-pointer text-light"
+            onClick={() => setMobileNavStatus(false)}
+          >
             Projects
           </Link>
-          <Link to="" className="text-lg font-medium text-light">
+          <Link
+            to="contact"
+            smooth={true}
+            spy={true}
+            duration={500}
+            className="text-lg font-medium cursor-pointer text-light"
+            onClick={() => setMobileNavStatus(false)}
+          >
             Contact
           </Link>
         </ul>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { buttonAnimation } from "../styles/global.styles";
 import { motion } from "framer-motion";
@@ -23,6 +24,7 @@ export default function Navbar({ setMobileNavStatus }: NavbarProps) {
           duration={500}
           offset={-110}
           className="flex items-center justify-center w-full h-full text-light"
+          onClick={() => setMobileNavStatus(false)}
         >
           C
         </Link>
@@ -36,6 +38,8 @@ export default function Navbar({ setMobileNavStatus }: NavbarProps) {
             smooth={true}
             spy={true}
             duration={500}
+            offset={-50}
+            onClick={() => setMobileNavStatus(false)}
           >
             About me
           </Link>
@@ -45,10 +49,19 @@ export default function Navbar({ setMobileNavStatus }: NavbarProps) {
             spy={true}
             duration={500}
             className="font-medium cursor-pointer text-light hover:text-secondary"
+            offset={-50}
+            onClick={() => setMobileNavStatus(false)}
           >
             Projects
           </Link>
-          <Link to="" className="font-medium text-light">
+          <Link
+            to="contact"
+            smooth={true}
+            spy={true}
+            duration={500}
+            className="font-medium cursor-pointer text-light hover:text-secondary"
+            onClick={() => setMobileNavStatus(false)}
+          >
             Contact
           </Link>
         </ul>

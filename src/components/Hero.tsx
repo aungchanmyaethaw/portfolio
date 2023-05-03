@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Button, buttonAnimation } from "../styles/global.styles";
 import { FaFolder } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 export default function Hero() {
   return (
@@ -31,12 +32,18 @@ export default function Hero() {
           I believe that good design is just as important as good code, and I
           strive to deliver both in every project I work on.
         </p>
-        <Button
-          whileHover={buttonAnimation}
-          className="flex items-center gap-2 text-base md:!text-lg lg:!text-xl"
-        >
-          <FaFolder size={20} />
-          Projects
+        <Button whileHover={buttonAnimation}>
+          <Link
+            to="projects"
+            className="flex items-center py-1 gap-2 text-base md:!text-lg lg:!text-xl w-full h-full"
+            smooth={true}
+            spy={true}
+            duration={500}
+            offset={-50}
+          >
+            <FaFolder size={20} />
+            Projects
+          </Link>
         </Button>
       </HeroContainer>
     </motion.section>
