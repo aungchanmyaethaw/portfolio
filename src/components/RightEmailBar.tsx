@@ -13,7 +13,7 @@ export default function RightEmailBar() {
           aungchanmyaethaw0610@gmail.com
         </motion.a>
 
-        <div className="h-[12rem] w-[1px] bg-secondary bg-opacity-50" />
+        <div className="h-[8rem] w-[1px] bg-secondary bg-opacity-50" />
       </div>
     </div>
   );

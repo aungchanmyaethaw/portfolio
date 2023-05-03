@@ -37,7 +37,7 @@ export default function LeftSocialBar() {
             <FaLinkedin />
           </motion.a>
         </div>
-        <div className="h-[12rem] w-[1px] bg-secondary bg-opacity-50"></div>
+        <div className="h-[8rem] w-[1px] bg-secondary bg-opacity-50"></div>
       </div>
     </div>
   );
