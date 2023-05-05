@@ -67,7 +67,13 @@ export default function About() {
       <div className="flex flex-col-reverse items-center justify-between mx-auto lg:max-w-4xl xl:max-w-6xl lg:flex-row font-paragraph">
         <ul className="lg:basis-1/2 basis-full">
           {/* about */}
-          <article className="mb-10 text-paragraph text-light">
+          <motion.article
+            className="mb-10 text-paragraph text-light"
+            initial={{ opacity: 0, x: "-50" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h3 className="flex items-center gap-2 mb-5 text-lg md:text-xl font-heading ">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-opacity-90 bg-secondary">
                 <BsPerson size="16" />
@@ -117,9 +123,15 @@ export default function About() {
                 industry
               </li>
             </ul>
-          </article>
+          </motion.article>
           {/* skills */}
-          <article className="mb-10 text-paragraph text-light">
+          <motion.article
+            className="mb-10 text-paragraph text-light"
+            initial={{ opacity: 0, x: "-50" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h3 className="flex items-center gap-2 mb-5 text-lg md:text-xl font-heading ">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-opacity-90 bg-secondary">
                 <BsCodeSlash size="16" />
@@ -192,9 +204,15 @@ export default function About() {
                 Additional: Familiar with TypeScript and SCSS
               </li>
             </ul>
-          </article>
+          </motion.article>
           {/* exprience */}
-          <article className="text-paragraph text-light">
+          <motion.article
+            className="text-paragraph text-light"
+            initial={{ opacity: 0, x: "-50" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h3 className="flex items-center gap-2 mb-5 text-lg md:text-xl font-heading ">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-seconday bg-secondary">
                 <BsBriefcase size="16" />
@@ -239,7 +257,7 @@ export default function About() {
                 </ul>
               </li>
             </ul>
-          </article>
+          </motion.article>
           {/* <motion.p
             initial={{ opacity: 0, x: "-50" }}
             whileInView={{ opacity: 1, x: 0 }}
