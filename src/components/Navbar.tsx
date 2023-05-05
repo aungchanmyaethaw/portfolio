@@ -71,7 +71,7 @@ export default function Navbar({ setMobileNavStatus }: NavbarProps) {
           rel="noopener noreferrer"
           whileHover={buttonAnimation}
         >
-          CV Form
+          Download CV
         </DownloadLink>
       </nav>
       <motion.button

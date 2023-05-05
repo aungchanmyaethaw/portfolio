@@ -29,8 +29,6 @@ export default function Hero() {
           </span>{" "}
           and
           <span className="font-semibold text-secondary"> user-friendly</span>.
-          I believe that good design is just as important as good code, and I
-          strive to deliver both in every project I work on.
         </p>
         <Button whileHover={buttonAnimation}>
           <Link
@@ -42,7 +40,7 @@ export default function Hero() {
             offset={-50}
           >
             <FaFolder size={20} />
-            Projects
+            Go to projects
           </Link>
         </Button>
       </HeroContainer>

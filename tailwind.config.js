@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#2D2C39",
+        primary: "#212121",
         secondary: "#4979EE",
-        light: "#F0EDFF",
+        light: "#f2ecff",
       },
       fontFamily: {
         heading: ["Open-Sans", "sans-serif"],
