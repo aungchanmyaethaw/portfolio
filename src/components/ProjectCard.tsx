@@ -7,12 +7,22 @@ import { ImageContainer } from "./About";
 interface ProjectCardProps extends ProjectProps {
   index: number;
 }
-const afterVariants = {
+
+const parentVariants = {
   initial: {
-    opacity: 0.5,
+    y: 0,
   },
   animate: {
-    opacity: 0,
+    y: 0,
+  },
+};
+
+const afterVariants = {
+  initial: {
+    y: "100%",
+  },
+  animate: {
+    y: 0,
   },
 };
 
@@ -117,30 +127,35 @@ export default function ProjectCard({
         transition={{ duration: 0.75, delay: 0.1 }}
         viewport={{ once: true }}
       >
-        <a
+        <motion.a
           href={deploy}
           rel="noreferrer"
           target="_blank"
-          className="block basis-1/2 "
+          className="block overflow-hidden basis-1/2"
+          variants={parentVariants}
+          initial="initial"
+          whileHover="animate"
         >
-          <ImageContainer className="relative w-full h-full basis-1/2">
+          <ImageContainer className="relative w-full h-full overflow-hidden rounded-lg basis-1/2">
             <motion.div
-              className="after"
+              className="flex items-center justify-center after"
               variants={afterVariants}
-              whileHover="animate"
-              initial="initial"
-            />
+              transition={{ duration: 0.4 }}
+            >
+              <FiUpload className="text-3xl text-primary" />
+            </motion.div>
+            <div className="before !top-0 !left-0 z-10 " />
 
             <img
               src={image}
               alt={title}
-              className="block object-cover w-full h-full rounded-lg"
+              className="relative z-0 block object-cover w-full h-full p-1 rounded-lg"
             />
           </ImageContainer>
-        </a>
+        </motion.a>
 
         <div
-          className={`relative z-10 ${
+          className={`relative z-30 ${
             index % 2 === 0 ? "right-12" : "left-12"
           }  basis-1/2`}
         >
