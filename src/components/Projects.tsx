@@ -39,6 +39,21 @@ const projects: ProjectProps[] = [
     git: "https://github.com/aungchanmyaethaw/nextjs-social-media-app",
     deploy: "https://nextjs-social-media-app.vercel.app/",
   },
+  {
+    image: "/promptopia.png",
+    title: "Promptopia",
+    content:
+      "Promptopia is an open-source AI prompting tool for modern world to discover, create and share creative prompts.Users can  log in with Google and securely authenticate into the application. Each user has a profile page where they can view and edit their prompt.Users can also search prompts based on username, tag and prompt.",
+    techs: [
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB Atlas",
+      "Mongoose",
+      "Typescript",
+    ],
+    git: "https://github.com/aungchanmyaethaw/promptopia",
+    deploy: "https://promptopia-mu.vercel.app/",
+  },
 ];
 
 export default function Projects() {
