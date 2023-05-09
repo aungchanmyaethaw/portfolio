@@ -25,7 +25,7 @@ const projects: ProjectProps[] = [
     title: "Github Jobs",
     content:
       "This is a React.js application that allows users to search for job listings using the GitHub Jobs API.It offers several features that enhance the user experience, including the ability to search job listings by location, description, or full-time/part-time positions. Users can also filter results based on job type, location, and company name, and browse through multiple pages of job listings using pagination support.",
-    techs: ["ReactJS", "Tailwind CSS", "Axios"],
+    techs: ["ReactJS", "Tailwind CSS", "React Query", "Axios"],
     git: "https://github.com/aungchanmyaethaw/github-jobs",
     deploy: "https://github-jobs-seven-ochre.vercel.app/",
   },
@@ -35,7 +35,14 @@ const projects: ProjectProps[] = [
     content:
       "This is a Next.js project that aims to create a social media application similar to Facebook.Users can  log in with Google and securely authenticate into the application. Each user has a profile page where they can view and edit their personal information, such as username and profile image. The profile page also displays the user's posts.Users can create new posts, including text and images. They can also like, comment on posts.",
 
-    techs: ["Next.js", "Tailwind CSS", "Prisma", "Supabase", "Cloudinary"],
+    techs: [
+      "Next.js",
+      "Tailwind CSS",
+      "Prisma",
+      "Supabase",
+      "Cloudinary",
+      "React Query",
+    ],
     git: "https://github.com/aungchanmyaethaw/nextjs-social-media-app",
     deploy: "https://nextjs-social-media-app.vercel.app/",
   },
