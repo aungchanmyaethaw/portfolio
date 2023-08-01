@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { DownloadLink, NavbarProps } from "./Navbar";
 import { buttonAnimation } from "../styles/global.styles";
-import CVForm from "../assets/Aung-Chan-Myae-Thaw-CV.pdf";
+import CVForm from "../assets/aung-chan-myae-thaw-CV.pdf";
 
 export default function MobileNavbar({ setMobileNavStatus }: NavbarProps) {
   return (
@@ -66,7 +66,7 @@ export default function MobileNavbar({ setMobileNavStatus }: NavbarProps) {
         </ul>
         <DownloadLink
           href={CVForm}
-          download="Aung-Chan-Myae-Thaw-CV"
+          download="aung-chan-myae-thaw-CV"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={buttonAnimation}
