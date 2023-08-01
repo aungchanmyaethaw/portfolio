@@ -66,7 +66,7 @@ export default function Navbar({ setMobileNavStatus }: NavbarProps) {
         </ul>
         <DownloadLink
           href={CVForm}
-          download="Aung-Chan-Myae-Thaw-CV"
+          download="aung-chan-myae-thaw-CV"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={buttonAnimation}
