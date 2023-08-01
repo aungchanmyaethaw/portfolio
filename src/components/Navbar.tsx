@@ -3,7 +3,7 @@ import { buttonAnimation } from "../styles/global.styles";
 import { motion } from "framer-motion";
 import { FaBars } from "react-icons/fa";
 import styled from "styled-components";
-import CVForm from "../assets/Aung-Chan-Myae-Thaw-CV.pdf";
+import CVForm from "../assets/aung-chan-myae-thaw-CV.pdf";
 
 export interface NavbarProps {
   setMobileNavStatus: React.Dispatch<React.SetStateAction<boolean>>;
